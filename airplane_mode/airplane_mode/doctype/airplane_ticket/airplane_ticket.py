@@ -12,6 +12,7 @@ class AirplaneTicket(Document):
         self.calculate_total_amount()
 
     def before_insert(self):
+        self.seat_calc()
         self.set_random_seat()
 
     def on_submit(self):
@@ -46,3 +47,18 @@ class AirplaneTicket(Document):
     def before_submit(self):
         if self.status != "Boarded":
             frappe.throw("The Airplane Ticket cannot be submitted unless the status is 'Boarded'.")
+
+    def seat_calc(self):
+        # Get the flight details
+        flight = frappe.get_doc('Airplane Flight', self.flight)
+
+        # Get the assigned airplane and its capacity
+        airplane = frappe.get_doc('Airplane', flight.airplane)
+        capacity = airplane.capacity  # Get the number of seats available
+
+        # Count the number of existing tickets for this flight
+        ticket_count = frappe.db.count('Airplane Ticket', {'flight': self.flight})
+
+        # Check if adding this ticket would exceed the capacity
+        if ticket_count >= capacity:
+            frappe.throw(f"Airplane is fully booked. It have capacity of {capacity} seats.")

@@ -21,7 +21,13 @@
   "destination_airport_code",
   "is_published",
   "route",
-  "amended_from"
+  "amended_from",
+  "section_break_lfys",
+  "crew_member",
+  "full_name",
+  "gender",
+  "column_break_ooaz",
+  "gate_number"
  ],
  "fields": [
   {
@@ -118,6 +124,40 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "section_break_lfys",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_member",
+   "fieldtype": "Link",
+   "label": "Crew Member",
+   "options": "Crew Member"
+  },
+  {
+   "fieldname": "column_break_ooaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "crew_member.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "crew_member.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Link",
+   "label": "Gate Number",
+   "options": "Gate Number"
   }
  ],
  "has_web_view": 1,
@@ -130,7 +170,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-02-27 11:49:09.766526",
+ "modified": "2025-03-03 16:42:23.075613",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
@@ -145,9 +185,39 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Fleet Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
   }
  ],
  "route": "flight",
