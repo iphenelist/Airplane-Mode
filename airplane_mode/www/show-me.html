@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Me Colors</title>
+</head>
+<body>
+    <h2>Showing Color: {{ frappe.form_dict.color or 'black' }}</h2>
+    <div class="color-box" style="width: 100%; height: 200px; background-color: {{ frappe.form_dict.color or 'black' }}; border: 1px solid #000;"></div>
+</body>
+</html>

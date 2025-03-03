@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="col-sm-6">
+	  <div class="card">
+		<div class="card-body">
+		  <h5 class="card-title">{{doc.airplane}}</h5>
+		  <p class="card-text">{{ doc.source_airport_code }} - {{doc.destination_airport_code}}<br>
+			{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }}|{{doc.time_of_departure}}|{{frappe.utils.format_duration(doc.duration)}}</p>
+		  <a href="{{ doc.name }}" class="btn btn-primary">View Flight</a>
+		</div>
+	  </div>
+	</div>
+  </div>

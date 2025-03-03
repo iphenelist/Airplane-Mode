@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{airplane}-{YYYY}-{#####}",
  "creation": "2025-02-21 16:50:12.652655",
@@ -17,7 +18,10 @@
   "source_airport_code",
   "column_break_oyph",
   "destination_airport",
-  "destination_airport_code"
+  "destination_airport_code",
+  "is_published",
+  "route",
+  "amended_from"
  ],
  "fields": [
   {
@@ -93,16 +97,40 @@
    "fieldtype": "Data",
    "label": "Destination Airport Code",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is published?"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Flight",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Airplane Ticket",
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-02-21 17:19:33.448511",
+ "modified": "2025-02-27 11:49:09.766526",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
@@ -122,6 +150,7 @@
    "write": 1
   }
  ],
+ "route": "flight",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
