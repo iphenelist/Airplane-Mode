@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-03-11 16:33:51.775016",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_number",
+  "other_details_for_the_shop",
+  "column_break_mjew",
+  "shop_location",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Int",
+   "label": "Shop Number"
+  },
+  {
+   "fieldname": "column_break_mjew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_location",
+   "fieldtype": "Data",
+   "label": "Shop Location"
+  },
+  {
+   "fieldname": "other_details_for_the_shop",
+   "fieldtype": "Text",
+   "label": "Other details for the shop"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOccupied"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Shop Contract",
+   "link_fieldname": "shop_number"
+  }
+ ],
+ "modified": "2025-03-11 16:44:33.014449",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Shop",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "status",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Available"
+  },
+  {
+   "color": "Red",
+   "title": "Occupied"
+  }
+ ]
+}

@@ -8,7 +8,10 @@
  "field_order": [
   "founding",
   "customer_care_number",
-  "headquarters"
+  "column_break_xyqb",
+  "headquarters",
+  "website",
+  "initial_audit_completed"
  ],
  "fields": [
   {
@@ -30,6 +33,21 @@
    "in_list_view": 1,
    "label": "Headquarters",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xyqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "default": "0",
+   "fieldname": "initial_audit_completed",
+   "fieldtype": "Check",
+   "label": "Initial Audit Completed"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -39,7 +57,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2025-03-03 15:16:32.338084",
+ "modified": "2025-03-10 16:41:34.464091",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",

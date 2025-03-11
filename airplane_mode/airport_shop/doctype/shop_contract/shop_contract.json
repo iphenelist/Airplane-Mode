@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-11 12:31:08.869698",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_information_section",
+  "first_name",
+  "phone",
+  "column_break_ybrz",
+  "email",
+  "business_type",
+  "contract_details_section",
+  "shop_number",
+  "shop_location",
+  "rent_amount",
+  "column_break_nxay",
+  "date_of_expiry",
+  "shop_name",
+  "other_details_for_the_shop",
+  "section_break_ecrh",
+  "html_test"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Information"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "column_break_ybrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Link",
+   "label": "Shop Number",
+   "options": "Shop"
+  },
+  {
+   "fetch_from": "shop_number.shop_number",
+   "fieldname": "shop_location",
+   "fieldtype": "Data",
+   "label": "Shop Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nxay",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date Of Expiry"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name"
+  },
+  {
+   "fetch_from": "shop_number.other_details_for_the_shop",
+   "fieldname": "other_details_for_the_shop",
+   "fieldtype": "Text",
+   "label": "Other details for the shop",
+   "read_only": 1
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "label": "Business Type"
+  },
+  {
+   "fieldname": "section_break_ecrh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_test",
+   "fieldtype": "HTML Editor",
+   "label": "html test"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-11 16:45:17.500094",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Shop Contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
