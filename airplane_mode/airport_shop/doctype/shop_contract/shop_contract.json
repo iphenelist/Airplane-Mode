@@ -1,37 +1,34 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{full_name}-{shop_name}-{YYYY}",
  "creation": "2025-03-11 12:31:08.869698",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "tenant_information_section",
-  "first_name",
+  "full_name",
   "phone",
   "column_break_ybrz",
   "email",
   "business_type",
+  "status",
   "contract_details_section",
   "shop_number",
   "shop_location",
   "rent_amount",
   "column_break_nxay",
-  "date_of_expiry",
+  "start_date",
+  "end_date",
   "shop_name",
-  "other_details_for_the_shop",
-  "section_break_ecrh",
-  "html_test"
+  "section_break_ixly",
+  "rent_payment_schedule"
  ],
  "fields": [
   {
    "fieldname": "tenant_information_section",
    "fieldtype": "Section Break",
    "label": "Tenant Information"
-  },
-  {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
   },
   {
    "fieldname": "column_break_ybrz",
@@ -55,7 +52,7 @@
   {
    "fieldname": "rent_amount",
    "fieldtype": "Currency",
-   "label": "Rent Amount"
+   "label": "Rent Amount Per Month"
   },
   {
    "fieldname": "shop_number",
@@ -75,21 +72,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "date_of_expiry",
-   "fieldtype": "Date",
-   "label": "Date Of Expiry"
-  },
-  {
    "fieldname": "shop_name",
    "fieldtype": "Data",
    "label": "Shop Name"
-  },
-  {
-   "fetch_from": "shop_number.other_details_for_the_shop",
-   "fieldname": "other_details_for_the_shop",
-   "fieldtype": "Text",
-   "label": "Other details for the shop",
-   "read_only": 1
   },
   {
    "fieldname": "business_type",
@@ -97,21 +82,53 @@
    "label": "Business Type"
   },
   {
-   "fieldname": "section_break_ecrh",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active"
+  },
+  {
+   "fieldname": "section_break_ixly",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "html_test",
-   "fieldtype": "HTML Editor",
-   "label": "html test"
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_payment_schedule",
+   "fieldtype": "Table",
+   "label": "Rent Payment Schedule",
+   "options": "Rent Payment Schedule"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-03-11 16:45:17.500094",
+ "links": [
+  {
+   "link_doctype": "Rent Payments",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2025-03-12 14:48:55.911069",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Contract",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -129,5 +146,10 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Active"
+  }
+ ]
 }

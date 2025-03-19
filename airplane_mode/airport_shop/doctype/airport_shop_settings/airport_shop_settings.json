@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-12 09:19:59.741090",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "settings_section",
+  "enable_rent_reminder",
+  "default_rent_amount_for_shops",
+  "column_break_yuyf",
+  "remainder_sender_email"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_rent_reminder",
+   "fieldtype": "Check",
+   "label": "Enable Rent Reminder"
+  },
+  {
+   "fieldname": "settings_section",
+   "fieldtype": "Section Break",
+   "label": "Settings"
+  },
+  {
+   "fieldname": "column_break_yuyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remainder_sender_email",
+   "fieldtype": "Data",
+   "label": "Remainder Sender Email"
+  },
+  {
+   "fieldname": "default_rent_amount_for_shops",
+   "fieldtype": "Currency",
+   "label": "Default rent amount for shops"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-03-12 12:31:13.898643",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Airport Shop Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

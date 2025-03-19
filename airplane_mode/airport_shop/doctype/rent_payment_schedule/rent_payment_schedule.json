@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-12 12:42:38.340255",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_of_payment",
+  "amount",
+  "paid_by",
+  "rent_payment_no",
+  "payment_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_of_payment",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of payment"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "paid_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Paid By"
+  },
+  {
+   "fieldname": "rent_payment_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Rent Payment No.",
+   "options": "Rent Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "Pending\nPaid",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-12 16:53:31.863384",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Rent Payment Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

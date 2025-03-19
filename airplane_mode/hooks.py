@@ -137,34 +137,34 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Shop Contract": {
+        "validate": [
+            "airplane_mode.airport_shop.doctype.shop_contract.shop_contract.shop"
+            ]
+    },
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"airplane_mode.tasks.all"
-# 	],
-# 	"daily": [
-# 		"airplane_mode.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"airplane_mode.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"airplane_mode.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"airplane_mode.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"airplane_mode.tasks.all"
+	# ],
+	# "daily": [
+	# 	"airplane_mode.tasks.daily"
+	# ],
+	"*/2 * * * *": [
+        "airplane_mode.airport_shop.doctype.shop_contract.shop_contract.send_rent_reminders"
+	],
+	# "weekly": [
+	# 	"airplane_mode.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"airplane_mode.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
